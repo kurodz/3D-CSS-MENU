@@ -1,0 +1,382 @@
+body{
+ overflow-x:hidden;
+}
+.border
+{
+   position: absolute;
+   background:url("star.jpg");
+   margin-top:9%;
+   left:7%;
+   width:90%; 
+   height:90%;    
+}
+#font{
+    font-family: 'Oleo Script', cursive;
+    font-size:450%;
+    position:absolute;
+    width:40%;
+    height:10%;  
+    top:3%;
+    left:35%; 
+    float:left;
+  
+}
+#system{
+    font-family: 'Alegreya', serif;
+    font-size:250%;
+    position:absolute;
+    width:40%;
+    height:10%;  
+    top:3%;
+    left:73%; 
+    float:left;
+  
+}
+#score{
+    font-family: 'Alegreya', serif;
+    font-size:250%;
+    position:absolute;
+    width:40%;
+    height:10%;  
+    top:3%;
+    left:73%; 
+    float:left;
+  
+}
+#time{
+    font-family: 'Alegreya', serif;
+    font-size:250%;
+    position:absolute;
+    width:40%;
+    height:10%;  
+    top:3%;
+    left:73%; 
+    float:left;
+  
+}
+#top{
+    
+    position:absolute;
+    width:100%;
+    height:10%;  
+    top:3%;
+    border-bottom:3px solid;
+  
+}
+
+
+#block{
+    position:absolute;
+    border:solid 5px;
+    float:left;
+    width:80px;
+    height:80px;  
+    top:-18%;
+    left:85%;
+
+  
+}
+
+#icon{
+    position:absolute;
+    float:left;
+    margin-top:9%;
+    width:7%;
+    height:90%;
+    
+     }
+
+td{
+     font-family: 'Alegreya', serif;
+     text-align:center;
+     padding-right:10px;     
+ }
+#td1{
+      background-image:url("fb1.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      width:64px;
+      height:64px;
+      
+ }
+
+#td1:hover{
+      background-image:url("fb2.png");
+      transition:.5s;
+      cursor:pointer;
+  
+
+ }
+#td2{
+      background-image:url("tw1.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      width:64px;
+      height:64px;
+    
+ }
+
+#td2:hover{
+      background-image:url("tw2.png");
+      transition:.5s;
+      cursor:pointer;
+  
+
+ }
+#td3{
+      background-image:url("yu1.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      width:64px;
+      height:64px;
+    
+ }
+
+#td3:hover{
+      background-image:url("yu2.png");
+      transition:.5s;
+      cursor:pointer;
+  
+
+ }
+#td4{
+      background-image:url("ig1.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      width:64px;
+      height:64px;
+    
+ }
+
+#td4:hover{
+      background-image:url("ig2.png");
+      transition:.5s;
+      cursor:pointer;
+  
+
+ }
+#td5{
+      background-image:url("gp1.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      width:64px;
+      height:64px;
+    
+ }
+
+#td5:hover{
+      background-image:url("gp2.png");
+      transition:.5s;
+      cursor:pointer;
+  
+
+ }
+
+
+
+    #container {/*給立方體0的空間*/
+    
+      margin-top:3%;
+      width: 800px;
+      height: 100px;
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }                
+        #container1 {/*給立方體1的空間*/      
+      width: 1200px;
+      height: 100px;
+  
+      
+      
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }      
+          #container2 {/*給立方體的空間*/
+      width: 1800px;
+      height: 100px;
+  
+      
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }    
+          #container3 {/*給立方體的空間*/
+      width:800px;
+      height: 100px;
+   
+      
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }    
+          #container4 {/*給立方體的空間*/
+      width:1600px;
+      height:100px;
+      
+      
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }    
+          #container5 {/*給立方體的空間*/
+      width:300px;
+      height: 100px;
+      
+      -webkit-perspective-origin: 50% 225px; /*立體透視*/
+    }     
+    #shape {/*整個立方體1的設定*/
+
+      position: absoulte;
+      margin-top:10px;
+      margin: 0 auto;
+      height:200px;
+      width:150px;   
+      
+    
+   
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin 8s infinite linear;/*循環、速度*/
+    }
+      #shape1 {/*整個立方體2的設定*/
+
+      position: absoulte;
+      top: 0%;
+      left:50%
+      margin: 0 auto;
+      height: 200px;
+      width: 400px; 
+
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin1 8s infinite linear;/*循環、速度*/
+      
+    }
+      #shape2 {/*整個立方體2的設定*/
+
+      position: absoulte;
+      top: 0%;
+      margin: 0 auto;
+      height: 300px;
+      width: 350px;
+      
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin3 15s infinite linear;/*循環、速度*/
+      
+    }
+     #shape3 {/*整個立方體2的設定*/
+
+      position: absoulte;
+      top: 0%;
+      margin: 0 auto;
+      height: 300px;
+      width: 100px;
+     
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin1 10s infinite linear;/*循環、速度*/
+      
+    }
+      #shape4 {/*整個立方體2的設定*/
+
+      position: absoulte;
+      top: 0%;
+      margin: 0 auto;
+      height: 100px;
+      width: 250px;
+     
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin4 9s infinite linear;/*循環、速度*/
+      
+    }
+      #shape5 {/*整個立方體2的設定*/
+      position: relative;
+      top: 0%;
+      margin: 0 auto;
+      height: 80px;
+      width: 300px;  
+      -webkit-transform-style: preserve-3d;       
+      -webkit-animation: spin2 10s infinite linear;/*循環、速度*/
+      
+    }
+    
+    .plane { /*每個面的設定*/
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      border: 3px solid black;
+      -webkit-box-sizing: border-box;
+      text-align: center;
+      font-family: Times, serif;
+      font-size: 62pt;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      -webkit-transition: -webkit-transform 2s, opacity 2s;
+      -webkit-backface-visibility: hidden;
+    }
+
+    #shape.backfaces .plane {
+      /*-webkit-backface-visibility: visible;*/     
+      
+    }
+    @-webkit-keyframes spin { /*33行*/
+      from { -webkit-transform: rotateY(70 deg) rotateZ(-45deg); }
+      to   { -webkit-transform: rotateY(-720deg) rotateZ(-360deg); }
+      
+    }
+    @-webkit-keyframes spin1 { /*33行*/
+      from { -webkit-transform: rotateY(-70 deg) rotateZ(45deg); }
+      to   { -webkit-transform: rotateY(720deg) rotateZ(360deg); }
+      
+    }
+      @-webkit-keyframes spin2 { /*33行*/
+      from { -webkit-transform: rotateY(70 deg) rotateZ(70deg); }
+      to   { -webkit-transform: rotateY(1080deg) rotateZ(-720deg); }
+      
+    }
+        @-webkit-keyframes spin3 { /*33行*/
+      from { -webkit-transform: rotateY(-70 deg) rotateZ(70deg); }
+      to   { -webkit-transform: rotateY(-1080deg) rotateZ(360deg); }
+      
+    }
+       @-webkit-keyframes spin4 { /*33行*/
+      from { -webkit-transform: rotateY(70deg) rotateZ(270sdeg); }
+      to   { -webkit-transform: rotateY(-360deg) rotateZ(720deg); }
+      
+    }
+    .one {
+      
+      -webkit-transform: scale3d(1, 1,1) rotateX(90deg) translateZ(50px);
+      background-color:blue;
+       -webkit-animation: myfirst 10s linear 0s infinite alternate;
+    }
+    
+
+    .two {
+      -webkit-transform: scale3d(1,1, 1) translateZ(50px);
+      background-color:yellow;
+      -webkit-animation: myfirst1 10s linear 0s infinite alternate;
+    }
+
+     .three {
+      -webkit-transform: scale3d(1, 1, 1) rotateY(90deg) translateZ(50px);
+      background-color:green;
+    }
+
+      .four {
+      -webkit-transform: scale3d(1, 1, 1) rotateY(180deg) translateZ(50px);
+      background-color:red;
+    }
+
+      .five {
+      -webkit-transform: scale3d(1, 1, 1) rotateY(-90deg) translateZ(50px);
+      background-color:orange;
+    }
+
+      .six {
+      -webkit-transform: scale3d(1, 1, 1) rotateX(-90deg) translateZ(50px) rotate(180deg);
+      background-color:purple;
+    }
+ /*@-webkit-keyframes myfirst {
+    0%   {background:blue;}
+    25%  {background:green; }
+    50%  {background:red;}
+    75%  {background:purple;}
+    100% {background:yellow;}
+}
+ @-webkit-keyframes myfirst1 {
+    0%   {background:yellow;}
+    25%  {background:green; }
+    50%  {background:purple;}
+    75%  {background:red;}
+    100% {background:blue;}
+}                      */
