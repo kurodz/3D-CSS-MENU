@@ -1,6 +1,6 @@
 var i=0
 var score=0;
-	
+
 function system(){ 
 	$("#block").css({"transition": "all 0.8s", "-webkit-transition": "all 0.8s"});
 	var color = ["red", "yellow", "green", "blue", "orange", "purple"];
@@ -10,7 +10,7 @@ function system(){
 	$('#block').css('background-color', hex);
 	setTimeout(function(){ system();}, 3000);
 }
-
+/*
 function time(){
 	var d = new Date();
 	var hours = d.getHours();
@@ -28,9 +28,17 @@ function time(){
 	$("#time").text(hours +" : "+ mins +" : "+ secs);
 	
 	setTimeout(function(){ time();}, 1000);
-	}
+	}*/
+	
+	
+	
+function gameover(){
+	alert("GG!\n時間到，你得了"+score+"分");
+	}	
 
 $( document ).ready(function() {
+	
+$('#time').countdown({until: +20,onExpiry: gameover});
 var color = '';
 $('div').click(function() {
     var x = $(this).css('backgroundColor');
