@@ -50,6 +50,27 @@ $('div').click(function() {
 		score = score+1;
 		$( "#score" ).text( "Score：" + score );
 		}
+		
+		
+		
+		
+		
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+        // Alternatively you could use:
+        // (new Image()).src = this;
+    });
+}
+
+preload([
+    'fb2.png',
+    'tw2.png',
+    'yu2.png',
+	'ig2.png',
+	'gp2.png'
+]);
+
 })
 
 function hexc(colorval) { //抓取方塊色碼
