@@ -33,12 +33,25 @@ function time(){
 	
 	
 function gameover(){
-	alert("GG!\n時間到，你得了"+score+"分");
+		$(function() {
+		$(document).avgrund({
+			openOnEvent: false,
+			height: 200,
+			showClose: true,
+			showCloseText: 'close',
+			onBlurContainer: '.container',
+			template: '<h1 class="poptitle">遊戲結束！</h1>' +
+			'<div id="popup">' +
+			'你的分數：'+ score +
+			'</div>'
+		});
+	});
+
 	}	
 
 $( document ).ready(function() {
 	
-$('#time').countdown({until: +20,onExpiry: gameover});
+$('#time').countdown({until: +3,onExpiry: gameover});
 var color = '';
 $('div').click(function() {
     var x = $(this).css('backgroundColor');
@@ -50,27 +63,9 @@ $('div').click(function() {
 		score = score+1;
 		$( "#score" ).text( "Score：" + score );
 		}
-		
-		
-		
-		
-		
-function preload(arrayOfImages) {
-    $(arrayOfImages).each(function(){
-        $('<img/>')[0].src = this;
-        // Alternatively you could use:
-        // (new Image()).src = this;
-    });
-}
 
-preload([
-    'fb2.png',
-    'tw2.png',
-    'yu2.png',
-	'ig2.png',
-	'gp2.png'
-]);
 
+		
 })
 
 function hexc(colorval) { //抓取方塊色碼
