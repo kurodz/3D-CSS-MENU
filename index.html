@@ -2,15 +2,16 @@
 <html lang="en"><head>
 		<meta charset="UTF-8">
 		<title>Click Blocks</title>
-		<style>
-		*{
-			margin: 0;
-			padding: 0;
-			list-style: none;
-			font-family: arial,san-serf;
-		}
-		body{background-color: #eee;}
-		.menu{ margin: 50px auto 0;}
+<script src="jquery-1.11.2.min.js"></script>
+<style>
+*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-family: arial,san-serf;
+}
+body{background-color: #eee;}
+.menu{ margin: 50px auto 0;}
 		.menu ul{ text-align: center;}
 		.menu li{ display: inline;}
 		.menu a{ display: inline-block;height:16px;position: relative;top:0;box-shadow: 0 0 0 rgba(0,0,0,.3); padding: 10px 20px;margin: 0 8px; text-decoration: none; background-color: #ccc; border-radius: 6px; color: #FFF;}
@@ -120,11 +121,51 @@
 		#go {
 	position: absolute;
 	left: 35%;
-	top: 33%;
-	width: 300px;
+	top: 35%;
+	width: 350px;
 	height: 300px;
 }
-        </style>
+#go h1 {
+	font-family: "微軟正黑體";
+	text-shadow: 0px 0px;
+}
+#go p {
+	font-family: "細明體";
+	padding-top: 26px;
+	padding-right: 26px;
+	padding-bottom: 26px;
+	padding-left: 26px;
+	border-radius: 19px;
+	transition: .5s;
+	filter: alpha(opacity=0);
+	border-image-source: url(http://www.paintandplaytoday.co.uk/products-frame/frames-border-rolls-02.png);
+	border-image-slice: 20;
+	border-image-width: 1em;
+	border-image-repeat: stretch;
+}
+</style>
+<script>
+function aronhsujob(){
+	$('#go').html('<h1>徐偉倫</h1>'
+					+ '<p>頁面校正<br><br>jQuery、Javascript後端程式設計<br><br>Web SQL Databse資料庫</p>')
+					}
+function aronhsu(){
+	$('#go').html('<h1>徐偉倫</h1>'+'<p>班級：資四C<br><br>性別：男<br><br>生日：12/14<br><br>電子信箱：graph@livemail.tw</p>')
+}
+function chen(){
+	$('#go').html('<h1>陳柏維</h1>'+'<p>班級：資三B<br><br>性別：男<br><br>電子信箱：10110217@mail.chihlee.edu.tw</p>')
+	}
+function chenjob(){
+	$('#go').html('<h1>陳柏維</h1>'+'<p>遊戲概念<br><br>CSS3遊戲物件設定</p>')
+	}
+function wu(){
+	$('#go').html('<h1>伍國維</h1>'+'<p>班級：資三B<br><br>性別：男<br><br>電子信箱：10110256@mail.chihlee.edu.tw</p>')
+	}
+function wujob(){
+	$('#go').html('<h1>伍國維</h1>'+'<p>遊戲畫面<br><br>基本架構設計<br><br>計畫書</p>')
+	}
+
+</script>
 	</head>
 	<body>
 		<h1>Click Blocks !!!!</h1>
@@ -139,23 +180,23 @@
 				</li>
 				<li><a href="#">徐偉倫</a>
 					<ul class="sub2">
-						<li><a href="#">Email</a></li>
-						<li><a href="#">關於我</a></li>
-						<li><a href="#">分工</a></li>
+						<li><a href="mailto:graph@livemail.tw">Email</a></li>
+						<li><a href="#" onClick="aronhsu();">關於</a></li>
+						<li><a href="#" onClick="aronhsujob();">分工</a></li>
 					</ul>
 				</li>
 				<li><a href="#">陳柏維</a>
 					<ul class="sub2">
-						<li><a href="#">Email</a></li>
-						<li><a href="#">關於我</a></li>
-						<li><a href="#">分工</a></li>
+						<li><a href="mailto:10110217@mail.chihlee.edu.tw">Email</a></li>
+						<li><a href="#" onClick="chen();">關於</a></li>
+						<li><a href="#" onClick="chenjob();">分工</a></li>
 					</ul>
 				</li>
                 <li><a href="#">伍國維</a>
 					<ul class="sub2">
-						<li><a href="#">Email</a></li>
-						<li><a href="#">關於我</a></li>
-						<li><a href="#">分工</a></li>
+						<li><a href="mailto:10110256@mail.chihlee.edu.tw">Email</a></li>
+						<li><a href="#" onClick="wu();">關於</a></li>
+						<li><a href="#" onClick="wujob();">分工</a></li>
 					</ul>
 			</ul>
 		</nav>
@@ -173,9 +214,10 @@
 
 
 <div id="go">
-  <p>遊戲說明：</p>
-  <p>&nbsp;</p>
-  <p>點擊一樣顏色即可得分 </p>
+<br>
+  <p>遊戲說明：<br><br>
+  
+  點擊一樣顏色即可得分 </p>
 </div>
 
 

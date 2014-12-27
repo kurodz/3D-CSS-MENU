@@ -1,0 +1,53 @@
+@charset "utf-8";
+table.tablesorter {
+	font-family: "微軟正黑體";
+	background-color: #CDCDCD;
+	margin: 10px 0pt 15px;
+	font-size: 8pt;
+	text-align: center;
+	width: 378px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-size:30px 20px;
+	background-position: center right;
+	cursor: pointer;
+	font-size: xx-large;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	font-size: 28px;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+div h1 {
+	position: absolute;
+	left: 14
+$;
+	top: 12%;
+	padding-left: 100px;
+	left: 10%;
+}
+div img {
+	float: left;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+
+
+
+}

@@ -1,6 +1,6 @@
 var i=0
 var score=0;
-
+var db = openDatabase('clickblocks', '1.0', 'Block Game', 2 * 1024 * 1024);
 function system(){ 
 	$("#block").css({"transition": "all 0.8s", "-webkit-transition": "all 0.8s"});
 	var color = ["red", "yellow", "green", "blue", "orange", "purple"];
@@ -28,7 +28,7 @@ function time(){
 	$("#time").text(hours +" : "+ mins +" : "+ secs);
 	
 	setTimeout(function(){ time();}, 1000);
-	}*/
+}*/
 	
 	
 	
@@ -38,12 +38,13 @@ function gameover(){
 			openOnEvent: false,
 			height: 200,
 			showClose: true,
-			showCloseText: 'close',
-			onBlurContainer: '.container',
+			showCloseText: 'Close',
 			template: '<h1 class="poptitle">遊戲結束！</h1>' +
 			'<div id="popup">' +
-			'你的分數：'+ score +
-			'</div>'
+			'<p>你的分數：'+ score +
+			'</p></div>' +
+			'<section class="sendfield"><input type="text" id="name" placeholder="輸入您的名稱"><a href="#" onclick="insert();">送出</a></section>'
+			
 		});
 	});
 
@@ -52,6 +53,8 @@ function gameover(){
 $( document ).ready(function() {
 	
 $('#time').countdown({until: +3,onExpiry: gameover});
+
+
 var color = '';
 $('div').click(function() {
     var x = $(this).css('backgroundColor');
@@ -90,3 +93,55 @@ function hexy(colorval) { //抓取System色碼
 }
 });
 
+
+// Database
+
+
+
+db.transaction(function (tx) {  
+   tx.executeSql('CREATE TABLE IF NOT EXISTS rank (id INTEGER PRIMARY KEY, name VARCHAR(24), score INTEGER)');
+});
+
+function insert(){
+var name = document.getElementById("name").value;
+if (name==""){alert("請輸入名稱");return}
+db.transaction(function (tx) {  
+  tx.executeSql('INSERT INTO rank (name,score) VALUES (?,?)', [name, score],
+  function() { alert('資料新增成功!！');
+  				$('.content').show();
+  				$(document).avgrund({
+				width: 640,
+				height: 640,
+	  			openOnEvent: false,
+				showClose: true,
+				showCloseText: 'Close',
+    			template: $('.content')});
+				$('.content').append('<a href="#" onclick="dbDrop();">清除記錄</a>');
+				},
+
+  function() { alert("資料新增失敗!"); });;});
+
+
+	}
+	
+	
+function dbDrop() {  // 刪除資料表
+	
+	if (confirm("警告！是否確定清除資料？")){
+        db.transaction(function(t) {
+	        t.executeSql("DROP TABLE rank");
+			alert("清除完成");
+			window.location.href="main.html";
+        });
+
+	}
+	else{
+		return;
+		}
+		    }
+	
+db.transaction(function (tx) {
+   	tx.executeSql('SELECT * FROM rank', [], function (tx, results) {
+   	var len = results.rows.length;
+	if(len==0){$('.content a').remove();}}, null);
+});

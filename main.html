@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<title>Click Blocks</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
@@ -13,16 +14,14 @@
 <script src="jquery.countdown.js"></script>
 <script src="jquery.countdown-zh-TW.js"></script> 
 <script src="jquery.avgrund.min.js"></script>
-
-
-
+<script src="jquery.prettySocial.min.js"></script>
 </head>
-<body onLoad="system();time();">
+<body onLoad="system();">
 
  <div id="top">
     <div id="font">Click blocks</div>
     <div id="system">System:</div>
-    <div id="score" style="left:20%">Score:</div>
+    <div id="score" style="left:20%">Score：0</div>
     <div id="time" style="left:0%">Time:</div>
    
     
@@ -34,25 +33,35 @@
     <td>Social</td>
   </tr>
   <tr>
-    <td id="td1" onclick="window.location.href='http://www.facebook.com'"></td>
+    
+   <td><a href="#" data-type="facebook" data-url="http://sonnyt.com/prettySocial" data-title="prettySocial - custom social share buttons." data-description="Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." data-media="http://sonnyt.com/assets/imgs/prettySocial.png" class="prettySocial fa fa-facebook"><div id="td1">
+</div></a></td>
   </tr>
   
   <tr>
-    <td id="td2"onclick="window.location.href='http://www.twitter.com'"></td>
+    <td><a href="#" data-type="twitter" data-url="http://sonnyt.com/prettySocial" data-description="Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." data-via="sonnyt" class="prettySocial fa fa-twitter"><div id="td2"></div></a>
+</td>
   </tr>
   
   <tr>
-    <td id="td3"onclick="window.location.href='http://www.youtube.com'"></td>
+    <td>
+    <a href="#" data-type="googleplus" data-url="http://sonnyt.com/prettySocial" data-description="Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." class="prettySocial fa fa-google-plus"><div id="td3"></div></a>
+</td>
   </tr>
   <tr>
     <td id="td4"onclick="window.location.href='http://instagram.com'"></td>
   </tr>
    <tr>
-    <td id="td5"onclick="window.location.href='http://plus.google.com'"></td>
+    <td>
+    <a href="#" data-type="googleplus" data-url="http://sonnyt.com/prettySocial" data-description="Custom share buttons for Pinterest, Twitter, Facebook and Google Plus." class="prettySocial fa fa-google-plus"><div id="td5"></div></a>
+</td>
   </tr>
 
 </table>      
-      </div>   
+<div id="rank">各人排行</div>
+<div id="restart" onClick="window.location.href='main.html'";>重新開始</div>
+<div id="back" onClick="window.location.href='index.html'";>返回主頁</div>
+</div>   
 <div class="border">
   
   
@@ -123,6 +132,24 @@
          </div>
         </div>
 </div>
+
+
+<div class="content" style="display:none;" style="overflow-x:scroll;">
+<h1>各人排行<img src="crown.png" width="50" height="50" alt=""/></h1>
+<iframe src="rank.html"></iframe>
+<a href="#" onClick="dbDrop();">清除紀錄</a>
+</div>
+	<script type="text/javascript" class="source">
+			$('.prettySocial').prettySocial();
+			$('#rank').click(function(){$('.content').show()})
+			$('#rank').avgrund({
+			width: 640,
+			height: 640,
+			showClose: true,
+			showCloseText: 'Close',
+    		template: $('.content')
+});
+		</script>
 
 </body>
 </html>
