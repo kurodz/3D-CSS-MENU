@@ -37,6 +37,7 @@ function gameover(){
 		$(document).avgrund({
 			openOnEvent: false,
 			height: 200,
+			closeByDocument: false,
 			showClose: true,
 			showCloseText: 'Close',
 			template: '<h1 class="poptitle">遊戲結束！</h1>' +
@@ -52,7 +53,7 @@ function gameover(){
 
 $( document ).ready(function() {
 	
-$('#time').countdown({until: +3,onExpiry: gameover});
+$('#time').countdown({until: +20,onExpiry: gameover});
 
 
 var color = '';
@@ -98,13 +99,15 @@ function hexy(colorval) { //抓取System色碼
 
 
 
-db.transaction(function (tx) {  
+db.transaction(function (tx) { 
+ 
    tx.executeSql('CREATE TABLE IF NOT EXISTS rank (id INTEGER PRIMARY KEY, name VARCHAR(24), score INTEGER)');
 });
 
 function insert(){
 var name = document.getElementById("name").value;
 if (name==""){alert("請輸入名稱");return}
+var db = openDatabase('clickblocks', '1.0', 'Block Game', 2 * 1024 * 1024);
 db.transaction(function (tx) {  
   tx.executeSql('INSERT INTO rank (name,score) VALUES (?,?)', [name, score],
   function() { alert('資料新增成功!！');
