@@ -531,3 +531,45 @@ transition: background-image .5s ease-in-out;
 	}
 
 
+.easy {
+	text-decoration: none;
+	font-size: x-large;
+	color: #FFFFFF;
+	background-color: #00BB49;
+	position: absolute;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	top: 46%;
+	left: 20%;
+	border-radius: 9px;
+}
+.normal {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: x-large;
+	background-color: #005CD8;
+	padding-top: 9px;
+	padding-right: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+	position: absolute;
+	top: 46%;
+	left: 41%;
+	border-radius: 8px;
+}
+.hard {
+	font-size: x-large;
+	color: #FFFFFF;
+	background-color: #FD0004;
+	text-decoration: none;
+	border-radius: 9px;
+	position: absolute;
+	top: 46%;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	left: 63%;
+}

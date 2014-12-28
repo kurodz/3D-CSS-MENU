@@ -53,7 +53,21 @@ function gameover(){
 
 $( document ).ready(function() {
 	
-$('#time').countdown({until: +20,onExpiry: gameover});
+	
+$(function() {
+		$('.chose').show();
+		$(document).avgrund({
+			openOnEvent: false,
+			height: 200,
+			closeByDocument: true,
+			showClose: true,
+			showCloseText: 'Close',
+			template: $('.chose')			
+		});
+	});	
+
+	
+
 
 
 var color = '';
@@ -93,6 +107,23 @@ function hexy(colorval) { //抓取System色碼
     blockbg = '#' + parts.join('');
 }
 });
+
+
+
+
+function easy() {
+$('#time').countdown({until: +60,onExpiry: gameover});
+$('.avgrund-overlay').trigger('click');}
+function normal() {
+$('#time').countdown({until: +30,onExpiry: gameover});
+$('.avgrund-overlay').trigger('click');}
+function hard() {
+$('#time').countdown({until: +15,onExpiry: gameover});
+$('.avgrund-overlay').trigger('click');}
+
+
+
+
 
 
 // Database
@@ -148,3 +179,4 @@ db.transaction(function (tx) {
    	var len = results.rows.length;
 	if(len==0){$('.content a').remove();}}, null);
 });
+
