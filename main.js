@@ -10,6 +10,10 @@ function system(){
 	$('#block').css('background-color', hex);
 	setTimeout(function(){ system();}, 3000);
 }
+
+
+
+
 /*
 function time(){
 	var d = new Date();
@@ -54,6 +58,13 @@ function gameover(){
 $( document ).ready(function() {
 	
 	
+	
+	
+	
+	
+	
+	
+	
 $(function() {
 		$('.chose').show();
 		$(document).avgrund({
@@ -79,6 +90,9 @@ $('div').click(function() {
 	
     if(color==blockbg){		
 		score = score+1;
+		var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'KEY.wav');
+        audioElement.setAttribute('autoplay', 'autoplay');
 		$( "#score" ).text( "Score：" + score );
 		}
 
